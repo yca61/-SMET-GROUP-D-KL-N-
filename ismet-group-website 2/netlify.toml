@@ -1,7 +1,7 @@
 # Netlify, Next.js'i (App Router) otomatik algılar ve kendi Next.js çalışma zamanını kurar.
 # publish dizini bilerek TANIMLANMAZ: "Page not found" hatasına yol açabilir.
 [build]
-  command = "npm run build"
+  command = "npm install --include=dev && npm run build"
 
 [build.environment]
   NODE_VERSION = "20"
