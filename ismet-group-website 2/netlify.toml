@@ -1,8 +1,11 @@
-# Netlify, Next.js'i (App Router) otomatik algılar ve kendi Next.js çalışma zamanını kurar.
-# publish dizini bilerek TANIMLANMAZ: "Page not found" hatasına yol açabilir.
+# Next.js çalışma zamanı eklentisi açıkça tanımlanır; aksi halde site "Page not found" verebilir.
 [build]
-  command = "npm run build"
+  command = "npm install --include=dev && npm run build"
+  publish = ".next"
 
 [build.environment]
   NODE_VERSION = "20"
   NEXT_TELEMETRY_DISABLED = "1"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
